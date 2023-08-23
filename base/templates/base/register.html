@@ -1,0 +1,15 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+    <h1>Cadastro</h1>
+
+    <form method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="Cadastrar">
+
+    </form>
+
+    <p>Já tem uma conta? <a href="{% url 'login' %}">Faça seu login</a></p>
+
+{% endblock content %}

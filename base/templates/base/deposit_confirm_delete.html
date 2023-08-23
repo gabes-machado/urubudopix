@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base/main.html' %}
+{% block content %}
+
+
     <form method="POST" action="">
         <h1>Deletar PIX</h1>
         {% csrf_token %}
@@ -13,5 +9,5 @@
         <p>Tem certeza que deseja deletar o depósito {{ deposit.title }}?</p>
         <input type="submit" value="Deletar">
     </form>
-</body>
-</html>
+
+{% endblock content %}
